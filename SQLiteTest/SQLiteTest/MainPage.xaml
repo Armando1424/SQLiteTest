@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SQLiteTest"
+             x:Class="SQLiteTest.MainPage">
+
+
+    <StackLayout>
+
+        <Entry x:Name="txtName" Placeholder="Nomre"/>
+        <Entry x:Name="txtAge" Placeholder="Edad"/>
+        <Button x:Name="btnAgregar" Text="Agregar Datos" Clicked="btnAgregar_Clicked"/>
+        <Entry x:Name="txtId" Placeholder="Identificador"/>
+        <Button x:Name="btnBorrar" Text="Borrar Datos" Clicked="btnBorrar_Clicked"/>
+
+        <ListView x:Name="Users">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nombre}" Detail="{Binding Edad}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>  
+
+</ContentPage>
